@@ -1,4 +1,5 @@
 from ev3dev.ev3 import *
+from time import sleep
 
 gy = GyroSensor()
 
@@ -7,8 +8,8 @@ gy.mode='GYRO-ANG'
 
 units = gy.units
 
-while true:
+while True:
 	angle = gy.value()
 	print(str(angle) + " " + units)
-
+	sleep(0.2)
 
