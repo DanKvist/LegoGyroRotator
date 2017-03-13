@@ -3,7 +3,7 @@ from ev3dev.ev3 import *
 gy = GyroSensor()
 
 #Put sensor in ANGLE mode
-gy.mode('GYRO-ANG')
+gy.mode='GYRO-ANG'
 
 units = gy.units
 
