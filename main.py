@@ -7,7 +7,7 @@ gy.mode('GYRO-ANG')
 
 units = gy.units
 
-while true
+while true:
 	angle = gy.value()
 	print(str(angle) + " " + units)
 
