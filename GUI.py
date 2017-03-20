@@ -33,22 +33,17 @@ USdata = []
 for x in range(1,360):
 	USdata.extend([0])
 
-USdata
-
-
-
 
 
 iterator = 0
 while True:
 	root.update_idletasks()
-	root.update()
 
-	x = centre[0] + radarRadius*math.cos(iterator)
-	y = centre[1] + radarRadius*math.sin(iterator)
+	x = centre[0] + radarRadius*math.cos(iterator/360*math.pi)
+	y = centre[1] + radarRadius*math.sin(iterator/360*math.pi)
 
 	canvas.create_line(centre[0], centre[1], x, y, width = 2)
-	iterator = iterator + 1
+	iterator = (iterator + 1) % 359
 
 	time.sleep(0.1)
 
